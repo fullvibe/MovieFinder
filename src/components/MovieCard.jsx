@@ -4,12 +4,8 @@ import favorite from "../assets/favorite.svg";
 export default function MovieCard({ movie, isFavorite, toggleFavorite }) {
   return (
     <div className="movie__card">
-      <div className="movie__body">
-        <img
-          className="movie__img"
-          src={movie.image}
-          alt=""
-        />
+      <a target="_blank" href={movie.url} className="movie__body">
+        <img className="movie__img" src={movie.image} alt="" />
         <h2 className="movie__h2">{movie.title}</h2>
         <div className="gategory__movie">
           <div className="movie__gengre">{movie.genre}</div>
@@ -17,7 +13,7 @@ export default function MovieCard({ movie, isFavorite, toggleFavorite }) {
           <div className="movie__year">{movie.year}</div>
         </div>
         <div className="movie__rating">{movie.rating}</div>
-      </div>
+      </a>
       <button
         className={
           isFavorite

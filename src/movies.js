@@ -6,6 +6,7 @@ export const movies = [
     year: 2014,
     rating: 8.7,
     image: "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+    url: "https://www.themoviedb.org/movie/157336-interstellar",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const movies = [
     year: 2021,
     rating: 8.2,
     image: "https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
+    url: "https://www.themoviedb.org/movie/634649-spider-man-no-way-home",
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export const movies = [
     year: 2010,
     rating: 8.8,
     image: "https://image.tmdb.org/t/p/w500/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg",
+    url: "https://www.themoviedb.org/movie/27205-inception",
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ export const movies = [
     year: 2008,
     rating: 9.0,
     image: "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+    url: "https://www.themoviedb.org/movie/155-the-dark-knight",
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ export const movies = [
     year: 2009,
     rating: 7.9,
     image: "https://image.tmdb.org/t/p/w500/kyeqWdyUXW608qlYkRqosgbbJyK.jpg",
+    url: "https://www.themoviedb.org/movie/19995-avatar",
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ export const movies = [
     year: 1997,
     rating: 7.9,
     image: "https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
+    url: "https://www.themoviedb.org/movie/597-titanic",
   },
   {
     id: 7,
@@ -54,6 +60,7 @@ export const movies = [
     year: 1999,
     rating: 8.7,
     image: "https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
+    url: "https://www.themoviedb.org/movie/603-the-matrix",
   },
   {
     id: 8,
@@ -62,6 +69,7 @@ export const movies = [
     year: 2019,
     rating: 8.4,
     image: "https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
+    url: "https://www.themoviedb.org/movie/475557-joker",
   },
   {
     id: 9,
@@ -70,6 +78,7 @@ export const movies = [
     year: 2019,
     rating: 8.4,
     image: "https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
+    url: "https://www.themoviedb.org/movie/299534-avengers-endgame",
   },
   {
     id: 10,
@@ -78,6 +87,7 @@ export const movies = [
     year: 1994,
     rating: 9.3,
     image: "https://image.tmdb.org/t/p/w500/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg",
+    url: "https://www.themoviedb.org/movie/278-the-shawshank-redemption",
   },
   {
     id: 11,
@@ -86,6 +96,7 @@ export const movies = [
     year: 1994,
     rating: 8.9,
     image: "https://image.tmdb.org/t/p/w500/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg",
+    url: "https://www.themoviedb.org/movie/680-pulp-fiction",
   },
   {
     id: 12,
@@ -94,6 +105,7 @@ export const movies = [
     year: 1994,
     rating: 8.8,
     image: "https://image.tmdb.org/t/p/w500/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg",
+    url: "https://www.themoviedb.org/movie/13-forrest-gump",
   },
   {
     id: 13,
@@ -102,6 +114,7 @@ export const movies = [
     year: 2001,
     rating: 8.8,
     image: "https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
+    url: "https://www.themoviedb.org/movie/120-the-lord-of-the-rings-the-fellowship-of-the-ring",
   },
   {
     id: 14,
@@ -110,6 +123,7 @@ export const movies = [
     year: 2001,
     rating: 7.7,
     image: "https://image.tmdb.org/t/p/w500/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg",
+    url: "https://www.themoviedb.org/movie/671-harry-potter-and-the-philosopher-s-stone",
   },
   {
     id: 15,
@@ -118,6 +132,7 @@ export const movies = [
     year: 2013,
     rating: 7.5,
     image: "https://image.tmdb.org/t/p/w500/wVYREutTvI2tmxr6ujrHT704wGF.jpg",
+    url: "https://www.themoviedb.org/movie/138843-the-conjuring",
   },
   {
     id: 16,
@@ -126,6 +141,7 @@ export const movies = [
     year: 2017,
     rating: 7.3,
     image: "https://image.tmdb.org/t/p/w500/9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg",
+    url: "https://www.themoviedb.org/movie/346364-it",
   },
   {
     id: 17,
@@ -134,6 +150,7 @@ export const movies = [
     year: 2016,
     rating: 8.0,
     image: "https://image.tmdb.org/t/p/w500/3E53WEZJqP6aM84p5L4J2w2PZqM.jpg",
+    url: "https://www.themoviedb.org/movie/293660-deadpool",
   },
   {
     id: 18,
@@ -142,6 +159,7 @@ export const movies = [
     year: 2014,
     rating: 8.0,
     image: "https://image.tmdb.org/t/p/w500/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg",
+    url: "https://www.themoviedb.org/movie/118340-guardians-of-the-galaxy",
   },
   {
     id: 19,
@@ -150,6 +168,7 @@ export const movies = [
     year: 2012,
     rating: 8.0,
     image: "https://image.tmdb.org/t/p/w500/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg",
+    url: "https://www.themoviedb.org/movie/24428-the-avengers",
   },
   {
     id: 20,
@@ -158,6 +177,7 @@ export const movies = [
     year: 2016,
     rating: 7.5,
     image: "https://image.tmdb.org/t/p/w500/uGBVj3bEbCoZbDjjl9wTxcygko1.jpg",
+    url: "https://www.themoviedb.org/movie/284052-doctor-strange",
   },
   {
     id: 21,
@@ -166,6 +186,7 @@ export const movies = [
     year: 2021,
     rating: 8.0,
     image: "https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
+    url: "https://www.themoviedb.org/movie/438631-dune",
   },
   {
     id: 22,
@@ -174,6 +195,7 @@ export const movies = [
     year: 2023,
     rating: 8.3,
     image: "https://image.tmdb.org/t/p/w500/ptpr0kGAckfQkJeJIt8st5dglvd.jpg",
+    url: "https://www.themoviedb.org/movie/872585-oppenheimer",
   },
   {
     id: 23,
@@ -182,6 +204,7 @@ export const movies = [
     year: 2023,
     rating: 7.0,
     image: "https://image.tmdb.org/t/p/w500/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg",
+    url: "https://www.themoviedb.org/movie/346698-barbie",
   },
   {
     id: 24,
@@ -190,6 +213,7 @@ export const movies = [
     year: 1993,
     rating: 8.2,
     image: "https://image.tmdb.org/t/p/w500/b1xCNnyrPebIc7EWNZIa6jhb1Ww.jpg",
+    url: "https://www.themoviedb.org/movie/329-jurassic-park",
   },
   {
     id: 25,
@@ -198,6 +222,7 @@ export const movies = [
     year: 1994,
     rating: 8.5,
     image: "https://image.tmdb.org/t/p/w500/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg",
+    url: "https://www.themoviedb.org/movie/8587-the-lion-king",
   },
   {
     id: 26,
@@ -206,6 +231,7 @@ export const movies = [
     year: 2003,
     rating: 8.2,
     image: "https://image.tmdb.org/t/p/w500/eHuGQ10FUzK1mdOY69wF5pGgEf5.jpg",
+    url: "https://www.themoviedb.org/movie/12-finding-nemo",
   },
   {
     id: 27,
@@ -214,6 +240,7 @@ export const movies = [
     year: 2017,
     rating: 8.4,
     image: "https://image.tmdb.org/t/p/w500/gGEsBPAijhVUFoiNpgZXqRVWJt2.jpg",
+    url: "https://www.themoviedb.org/movie/354912-coco",
   },
   {
     id: 28,
@@ -222,6 +249,7 @@ export const movies = [
     year: 2013,
     rating: 8.2,
     image: "https://image.tmdb.org/t/p/w500/34m2tygAYBGqA9MXKhRDtzYd4MR.jpg",
+    url: "https://www.themoviedb.org/movie/106646-the-wolf-of-wall-street",
   },
   {
     id: 29,
@@ -230,6 +258,7 @@ export const movies = [
     year: 2000,
     rating: 8.5,
     image: "https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg",
+    url: "https://www.themoviedb.org/movie/98-gladiator",
   },
   {
     id: 30,
@@ -238,6 +267,7 @@ export const movies = [
     year: 1999,
     rating: 8.6,
     image: "https://image.tmdb.org/t/p/w500/8VG8fDNiy50H4FedGwdSVUPoaJe.jpg",
+    url: "https://www.themoviedb.org/movie/497-the-green-mile",
   },
 ];
 export const genreList = movies.reduce((arr, movie) => {
