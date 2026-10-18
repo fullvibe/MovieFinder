@@ -1,115 +1,233 @@
 body {
-  background-color: #071019;
-  font-family: "Roboto", sans-serif;
-  color: white;
+  background-color: #0f0f0f;
+  font-family: "Roboto", Arial, sans-serif;
+  color: #fff;
+  line-height: 1.3;
 }
+
 .container {
   max-width: 1700px;
-  margin: 0px auto;
-  position: relative;
-  min-height: 100vh;
+  margin: auto;
 }
+
 .header {
-  color: white;
-  font-size: 50px;
-  height: 50px;
-  padding-top: 10px;
+  border-bottom: 1px solid #333;
+}
+.header__inner {
+  max-width: 1500px;
+  margin: 0 auto;
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+.title__header {
+  font-size: 30px;
+  font-weight: 900;
 }
 .red {
-  color: rgb(143, 14, 14);
+  background: linear-gradient(90deg, #ff5500 0%, #ff9d00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
+
 .select {
   display: flex;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  position: relative;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  padding: 28px 0;
 }
 .select__input {
-  background-color: #18273673;
-  font-size: 25px;
-  border-radius: 4px;
-  padding: 5px;
-  color: white;
+  flex: 1 1 320px;
+  max-width: 520px;
+  height: 46px;
+  background-color: #232323;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 0 16px;
+  font-size: 17px;
+  color: #fff;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+.select__input::placeholder {
+  color: #8c8c8c;
+}
+.select__input:hover {
+  background-color: #2b2b2b;
+}
+.select__input:focus {
+  border-color: #ff5500;
+  background-color: #232323;
 }
 .option__select {
-  background-color: #18273673;
-  color: gray;
-  font-size: 25px;
-  border-radius: 4px;
-  margin-left: 25px;
-  padding: 4px;
-  padding-left: 0px;
+  height: 46px;
+  background-color: #232323;
+  color: #fff;
+  font-size: 17px;
+  border-radius: 8px;
+  padding: 0 14px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.15s;
 }
-.movie__card {
+.option__select:hover,
+.option__select:focus {
+  border-color: #ff5500;
 }
-.movie__body{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  color: inherit;
-}
-.movie__img {
-  width: 100px;
-  padding-bottom: 5px;
-  border-radius: 10px;
-  height: 150px;
-}
-.gategory__movie {
-  display: flex;
-  gap: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  color: gray;
-}
-.movie__h2{
-  max-width: 150px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-}
-.movie__rating {
-  padding-bottom: 5px;
-  color: yellow;
-}
-.movie__list {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(6, auto);
-}
-.movie__favorite {
-  background-color: transparent;
-  border: 1px solid white;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 5px 0px;
-  border-radius: 10px;
-}
-.movie__favorite-active {
-  background-color: red;
+.option__select option {
+  background: #1a1a1a;
+  color: #fff;
 }
 .favorite__input {
   display: flex;
-  gap: 15px;
   align-items: center;
-  font-size: 25px;
-  margin-left: 20px;
+  gap: 10px;
+  height: 46px;
+  padding: 0 16px;
+  background-color: #232323;
+  border-radius: 8px;
+  font-size: 17px;
   user-select: none;
 }
 .favorite__input input {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
+  accent-color: #ff5500;
+  cursor: pointer;
 }
-.movie__found {
-  font-size: 25px;
+.favorite__input label {
+  cursor: pointer;
 }
 .clear {
+  height: 46px;
   background-color: transparent;
-  border: 1px solid white;
-  padding: 5px 15px;
+  border: 2px solid #333;
+  padding: 0 20px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+.clear:hover {
+  background-color: #ff5500;
+  border-color: #ff5500;
+}
+.movie__list {
+  display: grid;
+  gap: 32px 20px;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+}
+.movie__card {
+  position: relative;
+}
+.movie__body {
+  display: block;
+  color: inherit;
+}
+.movie__poster {
+  position: relative;
+  aspect-ratio: 2 / 3;
   border-radius: 10px;
-  margin-left: 20px;
-  color: white;
-  font-size: 25px;
+  overflow: hidden;
+  background-color: #1a1a1a;
+}
+.movie__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.movie__card:hover .movie__img {
+  transform: scale(1.05);
+}
+.movie__rating {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  min-width: 38px;
+  padding: 4px 7px;
+  border-radius: 6px;
+  background-color: #777;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+.movie__rating-good {
+  background-color: #3bb33b;
+}
+.movie__rating-mid {
+  background-color: #777;
+}
+.movie__rating-bad {
+  background-color: #bd2c2c;
+}
+.movie__h2 {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.5em;
+  transition: color 0.15s;
+}
+.movie__card:hover .movie__h2 {
+  color: #ff5500;
+}
+.gategory__movie {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  color: #8c8c8c;
+  font-size: 14px;
+}
+.gategory__movie p {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #8c8c8c;
+}
+.movie__favorite {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity 0.2s, background-color 0.15s, transform 0.15s;
+}
+.movie__favorite img {
+  width: 22px;
+  height: 22px;
+}
+.movie__card:hover .movie__favorite,
+.movie__favorite:focus-visible,
+.movie__favorite-active {
+  opacity: 1;
+}
+.movie__favorite:hover {
+  background-color: #ff5500;
+  transform: scale(1.1);
+}
+.movie__favorite-active {
+  background-color: #ff5500;
+}
+.movie__found {
+  grid-column: 1 / -1;
+  padding: 60px 0;
+  font-size: 22px;
+  color: #8c8c8c;
+  text-align: center;
 }
