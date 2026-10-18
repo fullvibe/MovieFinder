@@ -5,10 +5,9 @@ import Select from "./components/Select";
 import { movies } from "./movies";
 
 function App() {
-
   const [search, setSearch] = useState("");
   const [genre, setGenre] = useState("All");
-  const [favorites, setFavorites] = useState([]);
+  const [favorites, setFavorites] = useState(getFavorites());
   const [onlyFavorite, setOnlyFavorite] = useState(false);
 
   // useEffect(() => {
@@ -49,10 +48,10 @@ function App() {
     }
   }
 
-  function clearFilters(){
-    setSearch("")
-    setGenre("All")
-    setOnlyFavorite(false)
+  function clearFilters() {
+    setSearch("");
+    setGenre("All");
+    setOnlyFavorite(false);
   }
 
   const filteredMovies = filterMovies();
@@ -64,6 +63,19 @@ function App() {
       document.title = `finded: ${filteredMovies.length} movies`;
     }
   }, [filteredMovies, search]);
+
+  useEffect(() => {
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  }, [favorites]);
+
+  function getFavorites(){
+    const saveFavorites = localStorage.getItem("favorites")
+    if(saveFavorites){
+      return JSON.parse(saveFavorites)
+    } else{
+      return []
+    }
+  }
 
   return (
     <div className="container">
