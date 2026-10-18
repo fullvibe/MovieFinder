@@ -1,0 +1,88 @@
+body {
+  background-color: #071019;
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+.container {
+  max-width: 1700px;
+  margin: 0px auto;
+  position: relative;
+  min-height: 100vh;
+}
+.header {
+  color: white;
+  font-size: 50px;
+  height: 50px;
+  padding-top: 10px;
+}
+.red {
+  color: rgb(143, 14, 14);
+}
+.select {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+}
+.select__input {
+  background-color: #18273673;
+  font-size: 25px;
+  border-radius: 4px;
+  padding: 5px;
+  color: white;
+}
+.option__select {
+  background-color: #18273673;
+  color: gray;
+  font-size: 25px;
+  border-radius: 4px;
+  margin-left: 25px;
+  padding: 4px;
+  padding-left: 0px;
+}
+.movie__card {
+}
+.movie__img {
+  width: 100px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+}
+.gategory__movie {
+  display: flex;
+  gap: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: gray;
+}
+.movie__rating {
+  padding-bottom: 5px;
+  color: yellow;
+}
+.movie__list{
+  display: flex;
+  gap: 20px;
+}
+.movie__favorite{
+  background-color: transparent;
+  border: 1px solid white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 5px 0px;
+  border-radius: 10px;
+}
+.movie__favorite-active{
+  background-color: red;
+}
+.favorite__input{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-size: 25px;
+  margin-left: 20px;
+  user-select: none;
+}
+.favorite__input input{
+  width: 30px;
+  height: 30px;
+}
