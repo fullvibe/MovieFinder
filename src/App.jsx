@@ -2,34 +2,12 @@ import { useEffect, useState } from "react";
 import MovieCard from "./components/MovieCard";
 import Header from "./components/Header";
 import Select from "./components/Select";
+import { movies } from "./movies";
 
 function App() {
-  const movies = [
-    {
-      id: 1,
-      title: "Interstellar",
-      genre: "Sci-Fi",
-      year: 2014,
-      rating: 8.7,
-    },
-    {
-      id: 2,
-      title: "Spider-Man",
-      genre: "Superhero",
-      year: 2026,
-      rating: 9.1,
-    },
-    {
-      id: 3,
-      title: "Astral",
-      genre: "Horror",
-      year: 2010,
-      rating: 7.2,
-    },
-  ];
 
   const [search, setSearch] = useState("");
-  const [genre, serGenre] = useState("All");
+  const [genre, setGenre] = useState("All");
   const [favorites, setFavorites] = useState([]);
   const [onlyFavorite, setOnlyFavorite] = useState(false);
 
@@ -71,6 +49,12 @@ function App() {
     }
   }
 
+  function clearFilters(){
+    setSearch("")
+    setGenre("All")
+    setOnlyFavorite(false)
+  }
+
   const filteredMovies = filterMovies();
 
   useEffect(() => {
@@ -88,19 +72,24 @@ function App() {
         search={search}
         setSearch={setSearch}
         genre={genre}
-        serGenre={serGenre}
+        setGenre={setGenre}
         onlyFavorite={onlyFavorite}
         setOnlyFavorite={setOnlyFavorite}
+        clearFilters={clearFilters}
       />
       <div className="movie__list">
-        {filteredMovies.map((movie) => (
-          <MovieCard
-            key={movie.id}
-            movie={movie}
-            isFavorite={favorites.includes(movie.id)}
-            toggleFavorite={toggleFavorite}
-          />
-        ))}
+        {filteredMovies.length === 0 ? (
+          <p className="movie__found">Movies Not Found</p>
+        ) : (
+          filteredMovies.map((movie) => (
+            <MovieCard
+              key={movie.id}
+              movie={movie}
+              isFavorite={favorites.includes(movie.id)}
+              toggleFavorite={toggleFavorite}
+            />
+          ))
+        )}
       </div>
     </div>
   );

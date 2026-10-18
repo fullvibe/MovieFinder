@@ -1,12 +1,14 @@
 import React from "react";
+import { genreList } from "../movies";
 
 export default function Select({
   search,
   setSearch,
   genre,
-  serGenre,
+  setGenre,
   onlyFavorite,
   setOnlyFavorite,
+  clearFilters,
 }) {
   return (
     <div className="select">
@@ -21,17 +23,27 @@ export default function Select({
         type="gengre"
         className="option__select"
         value={genre}
-        onChange={(event) => serGenre(event.target.value)}
+        onChange={(event) => setGenre(event.target.value)}
       >
         <option value="All">All</option>
-        <option value="Sci-Fi">Sci-Fi</option>
-        <option value="Superhero">Superhero</option>
-        <option value="Horror">Horror</option>
+        {genreList.map((item) => (
+          <option key={item} value={item}>
+            {item}
+          </option>
+        ))}
       </select>
       <div className="favorite__input">
-        <input id="favorite" type="checkbox" checked={onlyFavorite} onChange={(event) => setOnlyFavorite(event.target.checked)}/>
+        <input
+          id="favorite"
+          type="checkbox"
+          checked={onlyFavorite}
+          onChange={(event) => setOnlyFavorite(event.target.checked)}
+        />
         <label for="favorite">Only Favorites</label>
       </div>
+      <button className="clear" onClick={clearFilters}>
+        clear filters
+      </button>
     </div>
   );
 }
